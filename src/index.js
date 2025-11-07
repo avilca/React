@@ -1,25 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Greeting, UserCard } from "./Greeting"; /* Importar de forma individual */
+import Product, {Navbar} from "./Product"; /* Importar de forma por defecto */
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-function Greeting() {
-  function add(x, y) {
-    return x + y;
-  }
-
-  return (
-    <div>
-      <h1>{add(10, 30)}</h1>
-    </div>
-  );
-}
 
 root.render(
   <>
     <Greeting />
-    <Greeting />
-    <Greeting />
-    <Greeting />
+    <UserCard />
+    <Product />
   </>
 );
