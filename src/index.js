@@ -6,11 +6,17 @@ import {
 } from "./Greeting"; /* Importar de forma individual */
 import Product, { Navbar } from "./Product"; /* Importar de forma por defecto */
 
+import {Button} from "./Button";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <>
-    <UserCard
+    <Button text='Click me' />
+    <Button text='Pay' />
+    <Button text='' name='Jhony ' />
+
+      {/* UserCard
       name="Footgolito golito"
       amount={3000}
       married={true}
@@ -27,9 +33,9 @@ root.render(
       address={{ 
         street: "Avenida 3 de octubre 782", 
         city: "Comas" 
-      }}
+      }} */}
       
-    />
+    
 
   </>
 );
