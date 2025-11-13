@@ -15,28 +15,16 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Counter() {
 
-  const [ counter, setCounter ] = useState(0)
+  const [ mensaje, setMensaje ] = useState('')
 
 
   return (
     <div>
-      <h1>Counter: {counter}</h1>
+      <input onChange={e => setMensaje(e.target.value)}/>
       <button onClick={() => {
-        setCounter( counter + 1 );
+        alert('El mensaje es:' + mensaje)
       }}>
-        Sumar
-      </button>
-
-      <button onClick={() => {
-        setCounter(counter - 1)
-      }}>
-        Restar
-      </button>
-
-      <button onClick={() => {
-        setCounter(1000)
-      }}>
-        Reiniciar
+        Save
       </button>
 
 
