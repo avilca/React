@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ReactDOM from "react-dom/client";
 import {
   Greeting,
@@ -15,7 +15,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Counter() {
 
-  const [ mensaje, setMensaje ] = useState('')
+  const [ mensaje, setMensaje ] = useState('');
+  const [ counter, setCounter ] = useState(0);
+
+  useEffect(() => {
+    console.log('render')
+  }, [ counter ]);
 
 
   return (
@@ -26,6 +31,13 @@ function Counter() {
       }}>
         Save
       </button>
+
+      <hr/>
+      <h1>Counter: {counter}</h1>
+      <button onClick={() => setCounter(counter + 1)}>
+        Incrementar
+      </button>
+
 
 
     </div>
